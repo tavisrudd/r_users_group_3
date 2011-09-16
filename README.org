@@ -17,10 +17,7 @@ https://github.com/tavisrudd/r_users_group_3/tarball/master
 
   David Dossot @ddossot https://github.com/ddossot
 
-  Rob James 
-
-  ...
-
+  Rob James aetiologic@gmail.ca
 
 * Thanks to our Sponsors!
    Mozilla for hosting tonight
