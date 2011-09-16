@@ -8,8 +8,9 @@ while we are doing introductions!
 view the files online:
 https://github.com/tavisrudd/r_users_group_3
 
-download files (zip, tgz etc.):
-https://github.com/tavisrudd/r_users_group_3/archives/master
+or download files (zip, tgz etc.):
+https://github.com/tavisrudd/r_users_group_3/zipball/master
+https://github.com/tavisrudd/r_users_group_3/tarball/master
 
 * Introductions
   Tavis Rudd @tavisrudd https://github.com/tavisrudd/
