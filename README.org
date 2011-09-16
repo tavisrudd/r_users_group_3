@@ -1,0 +1,49 @@
+* wifi & links
+ 
+  BootupLabs -- getshitdone
+
+If you don't already have R installed on your laptop, install it
+while we are doing introductions!
+
+view the files online:
+https://github.com/tavisrudd/r_users_group_3
+
+download files (zip, tgz etc.):
+https://github.com/tavisrudd/r_users_group_3/archives/master
+
+* Introductions
+  Tavis Rudd @tavisrudd https://github.com/tavisrudd/
+
+  David Dossot @ddossot https://github.com/ddossot
+
+  Rob James 
+
+  ...
+
+
+* Thanks to our Sponsors!
+   Mozilla for hosting tonight
+
+   Pulse Energy for hosting the previous meetups
+  
+   Revolution Analytics for general sponsorship
+
+* Goals
+ For the Group
+    Not just about R! Data management, analysis and visualization in general
+    Meetings every 1 or 2 months
+    Mix of talks and interactive coding sessions 
+ Today
+    Enjoy 2 Talks
+    Continue learning (or help others do so)
+    Line up speakers for next meeting in Oct
+* David Dossot - R Service Bus
+* Rob James - 3 Essential R Libraries
+* You - collaborate on some basic exercises
+  
+  Please work in teams of 4 with people you haven't met before.
+
+  If you are experienced with R, help others.
+
+  If you aren't a programmer or don't have R installed, team up with
+  others.

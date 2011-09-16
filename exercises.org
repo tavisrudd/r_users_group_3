@@ -1,0 +1,171 @@
+* Essential Resources 
+- google !!!
+
+- type ? followed by a function name to see built-in help (function
+  must be in scope)
+
+- use help.search('a keyword') if you're not sure what to
+  look for
+
+- http://www.statmethods.net/index.html (or google quick-r) for intro material
+
+* hello world
+Start the R interpreter and print the string "hello world"
+
+#+begin_src R
+print("hello world") 
+# this is a comment
+#+end_src
+
+* hello.world function
+Create a function called hello.world that does what you did manually
+in the previous exercise. 
+
+#+begin_src R
+# define it
+hello.world <- function() { 
+  print("hello world")
+}
+# <- is the assignment operator, like = in javascript
+
+# call it 
+hello.world()
+#+end_src
+
+* create an anonymous version of the same function
+#+begin_src R
+# define it, but don't call it
+function () { print("hello world") }
+
+# define and call it 
+(function () { print("hello world") })()
+# this is just like javascript!
+
+# give it a name, how about "hello.world"
+hello.world <- function () { print("hello world") }
+hello.world()
+#+end_src
+
+* use Google to figure out what R's rules are for naming variables and functions
+* hello(name) function
+Create a variant of the previous function that accepts a `name`
+parameter and prints "Hello Mary", "Hello Lamb", etc. 
+
+Hint: you'll need to figure out how to concatenate/join strings
+
+#+begin_src R
+hello <- function(name) {
+  print(paste("hello", name))
+}
+hello("Jill")
+
+#+end_src
+
+* hello(name) with a default argument
+Give the `name` argument a default value.
+
+#+begin_src R
+hello <- function(name="Jack") {
+  print(paste("hello", name))
+}
+hello()
+
+#+end_src
+
+* create a `vector` of the following integers and assign it to a variable
+1,2,3,4
+#+begin_src R
+my.single.int <- 1234
+my.vector.of.ints <- c(1, 2, 3, 4)
+#+end_src
+* `c` is a function that combines its arguments
+By default it creates a `vector`
+* `vector` vs `atomic` values 
+A vector is an ordered 'list' (aka 'array' in other langs)
+of atomic values (all of the same 'mode' aka type / class)
+#+begin_src R
+# some atomic values
+1      # mode=integer
+"foo"  # mode=character
+2.2    # mode=numeric
+TRUE   # mode=logical (aka boolean)
+FALSE
+#+end_src
+
+#+begin_src R
+# vectors are always one dimensional, 
+# this combo of  vectors of integers  gets flattened 
+
+c(c(1, 2), c(3, 4))
+
+length(c(c(1, 2), c(3, 4))) == 4
+
+str(c(c(1, 2), c(3, 4)))
+# >> num [1:4] 1 2 3 4
+#+end_src
+
+
+* multiply each int by 5
+#+begin_src R
+my.single.int <- 1234
+my.single.int * 5
+my.vector.of.ints <- c(1, 2, 3, 4)
+my.vector.of.ints * 5
+#+end_src
+
+* create a `vector` of the following strings and assign it to a variable
+"Mary", "had", "a", "little", "lamb"
+
+#+begin_src R
+# 
+my.string <- "blah"
+
+my.vector.of.strings <- c("Mary", "had", "a", "little", "lamb")
+
+#+end_src
+
+* use the `toupper` function to uppercase each string
+#+begin_src R
+toupper("foo")
+toupper(c("Mary", "had", "a", "little", "lamb"))
+#+end_src
+
+* find a function that will give you the length of the vector
+* figure out the syntax to get the third element in the vector
+* create a function that applies another function to each element in a vector
+* find a function that will create a sequence of integers
+This is like the `range` function in Python.
+* use that function and the `matrix` function to create a 4 x 5 matrix of the first 20 natural numbers
+* figure out the syntax to get the matrix element at row 2, col 3
+* multiply every element in the matrix by 3 
+* find a function that gives you the dimensions of the matrix
+* convert this matrix to a vector
+* create a Boolean matrix of the same size 
+... that indicates whether the elements in our first matrix are > 13
+* use the Boolean matrix to take a subset of our first matrix
+... where the condition is true
+... and where it is false
+* what are the type and dimensions of the subset
+* figure out how to create a random sample of 100 integers
+* take a random sample of five elements from your first matrix
+* find a way to sort the result of that sampling
+* create a `list` that contains the letters of English and 
+... and their position in the alphabet as separate fields
+
+hint: letters is a constant built-in to R
+* find the built-in dataset `swiss` and the help information about it
+* what are the `type`, `dimensions`, `structure`, and `dimension names` of this dataset
+* figure out how to access each column of this dataset individually
+* show the first and last six elements of this dataset
+hint: there are built in functions that will do this for you
+* what are the types of the columns in `swiss`
+* create a subset of swiss that only includes the columns Catholic and Fertility
+* create a subset only showing the regions that are at least 50% Catholic
+* use the functions that Isabella mentioned to examine the swiss data
+* look at the `airquality` built-in dataset and create a subset without the NA Ozone values removed
+* plot the various dimensions of the airquality dataset
+* advanced exercise
+  - work in groups to choose some line-based log data (like apache logs, syslog, etc.)
+  - use `awk`, `perl`, `sed` or similar to select a subset (match a regular expression) and output csv
+  - save the output into a csv file and then import into R
+  - use what you've learnt so far to explore, summarize and plot the data 
