@@ -17,6 +17,7 @@ print("hello world")
 # this is a comment
 #+end_src
 
+
 * hello.world function
 Create a function called hello.world that does what you did manually
 in the previous exercise. 
@@ -201,12 +202,35 @@ str(m[m2])
 #+end_src
 
 * figure out how to create a random sample of 100 integers
+#+begin_src R
+rnorm(100)
+#+end_src
+
 * take a random sample of five elements from your first matrix
+
+#+begin_src R
+sample(m, 5)
+#+end_src
+
 * find a way to sort the result of that sampling
+
+#+begin_src R
+sort(sample(m, 5))
+#+end_src
+
 * create a `list` that contains the letters of English and 
 ... and their position in the alphabet as separate fields
 
 hint: letters is a constant built-in to R
+#+begin_src R
+list(positions=1:length(letters), letters=letters)
+#+end_src
+* create a `data.frame` of the same data
+
+#+begin_src R
+data.frame(positions=1:length(letters), letters=letters)
+#+end_src
+
 * find the built-in dataset `swiss` and the help information about it
 * what are the `type`, `dimensions`, `structure`, and `dimension names` of this dataset
 * figure out how to access each column of this dataset individually
