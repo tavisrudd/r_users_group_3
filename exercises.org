@@ -46,7 +46,7 @@ hello.world <- function () { print("hello world") }
 hello.world()
 #+end_src
 
-* use Google to figure out what R's rules are for naming variables and functions
+* R's rules are for naming variables and functions
 * hello(name) function
 Create a variant of the previous function that accepts a `name`
 parameter and prints "Hello Mary", "Hello Lamb", etc. 
@@ -130,22 +130,76 @@ toupper("foo")
 toupper(c("Mary", "had", "a", "little", "lamb"))
 #+end_src
 
-* find a function that will give you the length of the vector
+* find a function that will give you the length of a vector
 * figure out the syntax to get the third element in the vector
+#+begin_src R
+my.vector.of.strings[3]
+my.vector.of.ints[3]
+#+end_src
+
 * create a function that applies another function to each element in a vector
 * find a function that will create a sequence of integers
 This is like the `range` function in Python.
+
+#+begin_src R
+sequence(20)
+#+end_src
+
 * use that function and the `matrix` function to create a 4 x 5 matrix of the first 20 natural numbers
+#+begin_src R
+matrix(sequence(20), c(4,5))
+#+end_src
+
 * figure out the syntax to get the matrix element at row 2, col 3
-* multiply every element in the matrix by 3 
+#+begin_src R
+m <- matrix(sequence(20), c(4,5))
+m[2,3]
+#+end_src
+
+* multiply every element in the matrix by 3
+#+begin_src R
+m <- matrix(sequence(20), c(4,5))
+m * 3
+#+end_src
+ 
 * find a function that gives you the dimensions of the matrix
+#+begin_src R
+m <- matrix(sequence(20), c(4,5))
+dim(m)
+#+end_src
+
 * convert this matrix to a vector
-* create a Boolean matrix of the same size 
+#+begin_src R
+m <- matrix(sequence(20), c(4,5))
+c(m)
+#+end_src
+
+* create a `logical` (boolean) matrix of the same size 
 ... that indicates whether the elements in our first matrix are > 13
-* use the Boolean matrix to take a subset of our first matrix
+#+begin_src R
+m <- matrix(sequence(20), c(4,5))
+m > 13
+#+end_src
+
+* use the logical matrix to take a subset of our first matrix
 ... where the condition is true
 ... and where it is false
+#+begin_src R
+m <- matrix(sequence(20), c(4,5))
+m[m > 13]
+#or 
+m2 <- m > 13
+m[m2]
+m[!m2]
+#+end_src
+
 * what are the type and dimensions of the subset
+#+begin_src R
+m <- matrix(sequence(20), c(4,5))
+m2 <- m > 13
+str(m[m2])
+#+end_src
+
 * figure out how to create a random sample of 100 integers
 * take a random sample of five elements from your first matrix
 * find a way to sort the result of that sampling
